@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">//화면의 최상단과 최하단이 게시물의 스크롤 영역 위를 덮고 있기 때문에 프레임 레이아웃으로 설정
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
+
+            <TextView
+                android:id="@+id/TextView_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="위치 추가 "
+                android:gravity="center"
+                android:padding="15dp"/>
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D9D8D3" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="사진" />
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D9D8D3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">//이미지/동영상 나열
+                <ImageView
+                    android:id="@+id/ImageView_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:adjustViewBounds="true"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D9D8D3" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="게시글"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <EditText
+                android:id="@+id/EditText_text"
+                android:layout_width="match_parent"
+                android:layout_height="352dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/et_border"
+                android:inputType="textMultiLine"
+                android:textSize="15dp"
+                android:gravity="top"/>//게시글 입력 뷰
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/ProgressBar_upload"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:max="100"
+                android:progress="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                android:progressBackgroundTint="#ffffff"
+                android:progressTint="#0092EF"
+                android:scaleY="3"/>
+
+
+            <TextView
+                android:id="@+id/TextView_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="업로드 완료!"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ProgressBar_upload"
+                app:layout_constraintEnd_toEndOf="@+id/ProgressBar_upload"
+                app:layout_constraintStart_toStartOf="@+id/ProgressBar_upload"
+                app:layout_constraintTop_toTopOf="@+id/ProgressBar_upload"
+                />
+
+            <Button
+                android:id="@+id/Button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toStartOf="@+id/camera_storage_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ProgressBar_upload" />//최상단의 취소 버튼
+
+
+
+            <Button
+                android:id="@+id/Button_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정"
+                android:background="#ffffff"
+                android:textColor="#0092EF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/camera_storage_button"
+                app:layout_constraintTop_toBottomOf="@+id/ProgressBar_upload" />//최상단의 업로드 버튼
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D9D8D3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/next_button" />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/TextView_library"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="라이브러리"
+                android:textColor="#000000"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/TextView_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="카메라"
+                android:textColor="#000000"
+                android:paddingBottom="10dp"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>

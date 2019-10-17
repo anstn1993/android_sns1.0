@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sns">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="SNS"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.sns.PlaceSearchActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name="com.example.sns.EditPostInMyAccountActivity" />
+        <activity android:name="com.example.sns.FindPasswordActivity" />
+        <activity android:name="com.example.sns.ChangePasswordActivity" />
+        <activity android:name="com.example.sns.FindIdResultActivity" />
+        <activity android:name="com.example.sns.FindIdActivity" />
+        <activity android:name="com.example.sns.MyPostActivity" />
+        <activity android:name="com.example.sns.AccountOthersActivity" />
+        <activity android:name="com.example.sns.OthersPostActivity" />
+        <activity
+            android:name="com.example.sns.ProfileSetActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name="com.example.sns.CommentActivity" />
+        <activity
+            android:name="com.example.sns.EditPostActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.example.sns.MapActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.example.sns.EditAccountActivity" />
+        <activity android:name="com.example.sns.AccountActivity" />
+        <activity android:name="com.example.sns.NotificationActivity" />
+        <activity
+            android:name="com.example.sns.PostActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.sns.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="com.example.sns.MainActivity" />
+        <activity android:name="com.example.sns.JoinActivity" />
+        <activity android:name="com.example.sns.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.haram.camera.sns.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBxnrPDD7kD74EiSkPGkMLZSZGZTDSMxz0" />
+    </application>
+
+</manifest>

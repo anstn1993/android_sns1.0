@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+    android:weightSum="8">//각 뷰들을 수직으로 나열하기 위한 레이아웃
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:paddingTop="10dp"
+        android:paddingRight="90dp"
+        android:paddingLeft="90dp"
+        />//로고 이미지
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/EditText_ID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/et_border"
+            android:hint="아이디"
+            android:inputType="text"
+            android:layout_weight="8"
+            android:padding="13dp" />
+
+        <TextView
+            android:id="@+id/TextView_idcheck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginTop="15dp"
+            android:text="중복여부"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    //가입 이메일 입력 칸
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/EditText_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/et_border"
+            android:hint="이름"
+            android:inputType="text"
+            android:layout_weight="8"
+            android:padding="13dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:text="중복여부"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    //이름 입력 칸
+
+    //닉네임 입력 칸
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/EditText_nickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/et_border"
+            android:hint="닉네임"
+            android:inputType="text"
+            android:layout_weight="8"
+            android:padding="13dp" />
+
+        <TextView
+            android:id="@+id/TextView_nicknamecheck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:text="중복여부"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/EditText_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/et_border"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:padding="13dp"
+            android:layout_weight="8"/>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:text="중복여부"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    //비밀번호 입력 칸
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/EditText_checkpassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/et_border"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:layout_weight="8"
+            android:padding="13dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:text="중복여부"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    //비밀번호 확인 칸
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/EditText_identitynumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/et_border"
+            android:hint="주민등록번호 뒷자리"
+            android:inputType="numberPassword"
+            android:layout_weight="8"
+            android:padding="13dp" />
+
+        <TextView
+            android:id="@+id/TextView_identitycheck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:text="중복여부"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    //주민번호 입력 칸
+
+    <Button
+        android:id="@+id/Button_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가입하기"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/joinbutton_border"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />//가입하기 버튼
+
+    <Button
+        android:id="@+id/Button_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:textColor="#959396"
+        android:background="@drawable/button_border"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="15dp"
+        />//취소 칸
+
+
+
+
+</LinearLayout>
+

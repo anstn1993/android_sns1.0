@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecyclerView_main_post_list"
+        android:layout_width="match_parent"
+        android:layout_height="509dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <ImageView
+            android:id="@+id/ImageView_logo"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ffffff"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />//최상단 좌측의 로고 이미지
+
+    <ImageButton
+        android:id="@+id/ImageButton_messenger"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />//최상단 우측의 채팅 버튼
+
+    <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D9D8D3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageButton_messenger" />
+
+
+    <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D9D8D3"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">//하단의 버튼을 수평으로 나열하기 위한 레아아웃
+
+        <ImageButton
+                android:id="@+id/Button_home"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home_clicked" />//홈(메인) 버튼
+
+        <ImageButton
+                android:id="@+id/Button_search"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search" />//검색 버튼
+
+        <ImageButton
+                android:id="@+id/Button_post"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add" />//게시물 추가 버튼
+
+
+        <ImageButton
+                android:id="@+id/Button_notification"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/notification" />//알림 버튼
+
+        <ImageButton
+                android:id="@+id/Button_account"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/account" />//계정 버튼
+        </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_suggestupload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dip"
+            android:background="@drawable/speech_box">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="새로운 게시물을 업로드하세요!"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="35dp"
+            android:gravity="center"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="30dip"
+
+            android:layout_height="30dip"
+
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/down_arrow_nor" />
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
+

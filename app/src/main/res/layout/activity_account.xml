@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">//화면의 최상단과 최하단이 게시물의 스크롤 영역 위를 덮고 있기 때문에 프레임 레이아웃으로 설정
+
+
+
+
+
+    //----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">//최상단 레이아웃
+
+        <TextView
+            android:id="@+id/TextView_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:text="MoonSoo"
+            android:textColor="#000000"
+            android:textSize="23dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/TextView_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="로그아웃"
+            android:textSize="20dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D9D8D3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/CircleImageView_profile_picture" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/CircleImageView_profile_picture"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="127dp"
+            android:layout_height="126dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/circle"
+            app:civ_border_width="0dp"
+            app:civ_border_color="#FF000000"
+            app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextView_nickname"/>
+
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="210dp"
+            android:layout_height="102dp"
+            android:layout_marginTop="10dp"
+            android:shrinkColumns="*"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/CircleImageView_profile_picture"
+            app:layout_constraintTop_toBottomOf="@+id/divider1">//게시물, 팔로워, 팔로잉, 프로필 수정 버튼을 담는 레이아웃
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">//게시물, 팔로워, 팔로잉을 담는 레이아웃
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:text="게시물" />//게시물 버튼(텍스트)
+
+                <Button
+                    android:id="@+id/Button_postcount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:text="0" />//게시물 버튼(숫자)
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:text="" />//팔로잉 버튼(텍스트)
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">//게시물, 팔로워, 팔로잉을 담는 레이아웃
+
+
+                <Button
+                    android:id="@+id/Button_editaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:background="@drawable/button_border"
+                    android:text="프로필 수정" />//프로필 수정 버튼(배경에 따로 xml파일을 만들어서 거기에 버튼 테두리 설정을 해둠)
+                span속성을 통해서 하나의 뷰가 열 3칸을 모두 차지하게 설정
+            </TableRow>
+
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/TextView_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="김문수"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CircleImageView_profile_picture" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D9D8D3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextView_name" />//프로필 수정과 이름 바로 밑의 구분선
+
+
+
+        //--------------------------------게시물 테이블 레이아웃---------------------------------
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RecyclerView_account_post_grid"
+            android:layout_width="match_parent"
+            android:layout_height="345dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">//하단 메뉴를 하단에 고정시키기 위해 하단벽면을 타깃으로 해서 제약 조건을 줬음
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D9D8D3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linearLayout" />//구분선
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">//하단 메뉴들을 가로로 나열하기 위한 레이아웃
+
+
+            <ImageButton
+                android:id="@+id/Button_home"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home" />//홈(메인) 버튼
+
+            <ImageButton
+                android:id="@+id/Button_search"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search" />//검색 버튼
+
+            <ImageButton
+                android:id="@+id/Button_post"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add" />//게시물 추가 버튼
+
+
+            <ImageButton
+                android:id="@+id/Button_notification"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/notification" />//알림 버튼
+
+            <ImageButton
+                android:id="@+id/Button_account"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="#ffffff"
+                android:scaleType="fitCenter"
+                android:src="@drawable/account_clicked" />//계정 버튼
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

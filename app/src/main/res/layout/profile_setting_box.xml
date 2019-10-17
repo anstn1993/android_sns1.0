@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextView_library"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="라이브러리"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="50dp"/>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D9D8D3" />
+
+    <TextView
+        android:id="@+id/TextView_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카메라"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:padding="50dp"/>
+</LinearLayout>

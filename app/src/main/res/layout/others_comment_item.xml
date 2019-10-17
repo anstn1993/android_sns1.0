@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/CircleImageView_profile_picture"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:civ_border_width="0dp"
+            android:src="@drawable/circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TextView_nickname"
+            android:layout_width="51dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="닉네임"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/CircleImageView_profile_picture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TextView_comment"
+            android:layout_width="182dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:text="댓글"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/TextView_nickname"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/TextView_comment_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="n분 전"
+        android:paddingLeft="45dp"/>
+</LinearLayout>
