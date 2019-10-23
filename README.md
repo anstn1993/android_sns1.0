@@ -1,7 +1,7 @@
 # android_sns1.0
 my first android sns application
 
-[어플 시연 영상] (https://www.youtube.com/watch?v=DGg_yQxp_nk&t=295s)
+[어플 시연 영상](https://www.youtube.com/watch?v=DGg_yQxp_nk&t=295s)
 
 ## 제작 의도
 
