@@ -7,6 +7,16 @@ my first android sns application
 
 이 어플은 서버와 연동되어있지 않으며 모든 데이터는 shared prefecence를 이용하여 로컬에 저장하는 방식으로 제작되었습니다.  
 
+## 사용 기술
+
+언어: 자바
+
+IDE: Android Studio
+
+주요 기술: recycler view, shared preference, handler, async task
+
+API: google map
+
 ## 작품 소개
 
 인스타그램을 모토로 한 SNS어플 입니다. 
