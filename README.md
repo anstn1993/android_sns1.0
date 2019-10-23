@@ -1,6 +1,8 @@
 # android_sns1.0
 my first android sns application
 
+[어플 시연 영상] (https://www.youtube.com/watch?v=DGg_yQxp_nk&t=295s)
+
 ## 제작 의도
 
 자바를 이용한 안드로이드 어플 개발을 학습하기 위해서 제작하였습니다. 안드로이드 플랫폼을 통한 어플 개발의 세계관을 이해할 수 있었습니다. 
